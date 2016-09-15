@@ -1,4 +1,4 @@
-package BeanCollector;
+package BeanCollector.Week1;
 
 /**
  * Created by HanWei on 13/9/2016.
