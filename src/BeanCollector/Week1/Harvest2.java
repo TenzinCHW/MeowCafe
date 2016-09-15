@@ -37,5 +37,4 @@ public class Harvest2 {
         }
         return total;
     }
-
 }
