@@ -4,6 +4,7 @@ package BeanGrinder.Week1;
  * Created by HanWei on 18/9/2016.
  */
 public class Ground2 {
+    // Week 1 Homework Question 2 - Power2 Generator
     public static void main(String[] args) {
         System.out.println(printNums());
     }
