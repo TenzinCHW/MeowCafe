@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Harvest2 {
     public static void main(String[] args){
-        // This is the third question for week 1
+        // This is the second question for week 1
         List<Integer> woof = new ArrayList<Integer>();
         for (int i = 1; i < 6; i++){
             woof.add(i);
