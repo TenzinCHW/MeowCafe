@@ -6,7 +6,7 @@ package BeanGrinder.Week1;
 public class MyRectangle2D {
     // Week 1 Homework Question 7 - The MyRectangle2D class, Ground 7
 
-    
+
     private double x;
     private double y;
     private double width;
