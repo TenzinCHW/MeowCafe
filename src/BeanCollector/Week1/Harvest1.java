@@ -4,7 +4,7 @@ package BeanCollector.Week1;
  * Created by HanWei on 13/9/2016.
  */
 public class Harvest1 {
-    // This is Question 1 in Week 1's PS for Info Sys
+    // This is Question 1 in Week 1's cohort for Info Sys
 
     public static void main(String[] args1){
         System.out.println(fibonacci());
