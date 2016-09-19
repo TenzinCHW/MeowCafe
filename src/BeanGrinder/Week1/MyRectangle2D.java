@@ -39,7 +39,7 @@ public class MyRectangle2D {
     public double[] getMinMax() {
         double[] vertices = {x - width / 2, x + width / 2, y - height / 2, y + height / 2};
         return vertices;
-        // Helper function that returns the value of {MinX, MaxX, MinY, MaxY} of the rectangle, in that order
+        // Helper function that returns the value of {minX, maxX, minY, maxY} of the rectangle, in that order
     }
 
     public MyRectangle2D() {
@@ -79,10 +79,32 @@ public class MyRectangle2D {
     }
 
     public boolean overlaps(MyRectangle2D r) {
-        return !(this.contains(r)) &&   // This rectangle should not contain the other rectangle
-                (this.contains(r.getMinMax()[0], r.getMinMax()[2]) ||   // But it should contain at least one of its points
-                        this.contains(r.getMinMax()[0], r.getMinMax()[3]) ||
-                        this.contains(r.getMinMax()[1], r.getMinMax()[2]) ||
-                        this.contains(r.getMinMax()[1], r.getMinMax()[3]));
+        double minX1 = this.getMinMax()[0];
+        double maxX1 = this.getMinMax()[1];
+        double minY1 = this.getMinMax()[2];
+        double maxY1 = this.getMinMax()[3];
+        double minX2 = r.getMinMax()[0];
+        double maxX2 = r.getMinMax()[1];
+        double minY2 = r.getMinMax()[2];
+        double maxY2 = r.getMinMax()[3];
+
+        return !(maxX2 < minX1 ||   // Go figure.
+        minX2 > maxX1 ||
+        maxY2 < minY1 ||
+        minY2 > maxY1);
+
+//        return !(this.contains(r) || r.contains(this)) &&   // One rectangle should not contain the other
+//                (this.contains(r.getMinMax()[0], r.getMinMax()[2]) ||   // But one should contain at least one of the
+//                this.contains(r.getMinMax()[0], r.getMinMax()[3]) ||    //other's points
+//                this.contains(r.getMinMax()[1], r.getMinMax()[2]) ||
+//                this.contains(r.getMinMax()[1], r.getMinMax()[3]))||
+//                (r.contains(this.getMinMax()[0], this.getMinMax()[2]) ||
+//                r.contains(this.getMinMax()[0], this.getMinMax()[3])  ||
+//                r.contains(this.getMinMax()[1], this.getMinMax()[2])  ||
+//                r.contains(this.getMinMax()[1], this.getMinMax()[3])) ||    // next few lines make sure they don't make
+//                ((this.getMinMax()[3] > r.getMinMax()[3] && this.getMinMax()[2] < r.getMinMax()[2] &&  // cross mark
+//                this.getMinMax()[0] > r.getMinMax()[0] && this.getMinMax()[1] < r.getMinMax()[1])  ||
+//                 (this.getMinMax()[3] < r.getMinMax()[3] && this.getMinMax()[2] > r.getMinMax()[2] &&
+//                 this.getMinMax()[0] < r.getMinMax()[0] && this.getMinMax()[1] > r.getMinMax()[1]));
     }
 }
