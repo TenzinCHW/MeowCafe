@@ -7,6 +7,7 @@ import BeanCollector.Week1.Account;
  */
 public class CheckingAccount extends Account {
     // Week 2 Homework Question 3
+    // Actually Ground2_3
 
     public CheckingAccount(int id, double balance){
         super(id, balance);
