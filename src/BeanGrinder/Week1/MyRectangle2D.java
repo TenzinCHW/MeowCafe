@@ -39,6 +39,7 @@ public class MyRectangle2D {
     public double[] getMinMax() {
         double[] vertices = {x - width / 2, x + width / 2, y - height / 2, y + height / 2};
         return vertices;
+        // Helper function that returns the value of {MinX, MaxX, MinY, MaxY} of the rectangle, in that order
     }
 
     public MyRectangle2D() {
@@ -65,13 +66,23 @@ public class MyRectangle2D {
 
     public boolean contains(double x, double y) {
         return (getMinMax()[0] < x && getMinMax()[1] > x && getMinMax()[2] < y && getMinMax()[3] > y);
+        // Make sure that value of x is in between the minimum and maximum x value of the rectangle
+        // and that value of y is also in between the minimum and maximum y value of the rectangle
     }
 
     public boolean contains(MyRectangle2D r) {
-        return (this.contains(r.getMinMax()[0], r.getMinMax()[2]) && this.contains(r.getMinMax()[0], r.getMinMax()[3]) && this.contains(r.getMinMax()[1], r.getMinMax()[2]) && this.contains(r.getMinMax()[1], r.getMinMax()[3]));
+        return (this.contains(r.getMinMax()[0], r.getMinMax()[2]) &&
+                this.contains(r.getMinMax()[0], r.getMinMax()[3]) &&
+                this.contains(r.getMinMax()[1], r.getMinMax()[2]) &&
+                this.contains(r.getMinMax()[1], r.getMinMax()[3]));
+        // This rectangle should fully contain the corners of the the other rectangle
     }
 
     public boolean overlaps(MyRectangle2D r) {
-        return !(this.contains(r)) && (this.contains(r.getMinMax()[0], r.getMinMax()[2]) || this.contains(r.getMinMax()[0], r.getMinMax()[3]) || this.contains(r.getMinMax()[1], r.getMinMax()[2]) || this.contains(r.getMinMax()[1], r.getMinMax()[3]));
+        return !(this.contains(r)) &&   // This rectangle should not contain the other rectangle
+                (this.contains(r.getMinMax()[0], r.getMinMax()[2]) ||   // But it should contain at least one of its points
+                        this.contains(r.getMinMax()[0], r.getMinMax()[3]) ||
+                        this.contains(r.getMinMax()[1], r.getMinMax()[2]) ||
+                        this.contains(r.getMinMax()[1], r.getMinMax()[3]));
     }
 }

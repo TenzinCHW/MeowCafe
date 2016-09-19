@@ -1,4 +1,4 @@
-package BeanCollector.Week2;
+package BeanGrinder.Week2;
 
 /**
  * Created by HanWei on 19/9/2016.
