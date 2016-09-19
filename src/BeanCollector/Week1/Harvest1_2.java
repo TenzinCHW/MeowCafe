@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by HanWei on 15/9/2016.
  */
-public class Harvest2 {
+public class Harvest1_2 {
     public static void main(String[] args){
         // This is the second question for week 1
         List<Integer> woof = new ArrayList<Integer>();

@@ -7,7 +7,7 @@ import java.util.Date;
  * Created by HanWei on 15/9/2016.
  */
 public class Account {
-    // This is actually Harvest3 :X
+    // This is actually Harvest1_3 :X
 
     private int id = 0;
     private double balance = 0;

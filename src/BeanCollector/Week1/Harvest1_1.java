@@ -3,7 +3,7 @@ package BeanCollector.Week1;
 /**
  * Created by HanWei on 13/9/2016.
  */
-public class Harvest1 {
+public class Harvest1_1 {
     // This is Question 1 in Week 1's cohort for Info Sys
 
     public static void main(String[] args1){
