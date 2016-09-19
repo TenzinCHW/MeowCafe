@@ -21,10 +21,10 @@ public class Harvest1_2 {
     public static int iterator(List<Integer> integers){
         // Part 1
         int total = 0;
-        Iterator<Integer> woof = integers.iterator();
+        Iterator<Integer> woof = integers.iterator();   // Create iterator object
 
-        while (woof.hasNext()){
-            total += woof.next();
+        while (woof.hasNext()){ // Ensure that the iterator still has values
+            total += woof.next();   // Add the next value of iterator object to total
         }
         return total;
     }

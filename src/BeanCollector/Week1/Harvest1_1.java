@@ -23,12 +23,12 @@ public class Harvest1_1 {
         return toprint;
     }
 
-    public static int fib(int n){
+    public static int fib(int n){   // Helper function to calculate the value of the nth number in the Fibonacci sequence
         if (n<2){
-            return n;
+            return n;   // Base case
         }
         else{
-            return fib(n-1) + fib(n-2);
+            return fib(n-1) + fib(n-2); // Recursive call
         }
     }
 }
