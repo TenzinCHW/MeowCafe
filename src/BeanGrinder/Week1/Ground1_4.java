@@ -3,7 +3,7 @@ package BeanGrinder.Week1;
 /**
  * Created by HanWei on 18/9/2016.
  */
-public class Ground4 {
+public class Ground1_4 {
     // Week 1 Homework Question 4 - Hailstone Sequence Counter
     public static void main(String[] args) {
         System.out.println(Counter(1));

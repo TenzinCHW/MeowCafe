@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by HanWei on 18/9/2016.
  */
-public class Ground6 {
+public class Ground1_6 {
     // Week 1 Homework Question 6 - White Space Trimmer
     public static void main(String[] args) {
         ArrayList<String> raar = new ArrayList<String>();

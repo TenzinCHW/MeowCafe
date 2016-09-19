@@ -5,10 +5,8 @@ import java.util.Arrays;
 /**
  * Created by HanWei on 19/9/2016.
  */
-public class PSet1 {
+public class Ground2_4 {
     // Week 2 Homework Question 4
-    // Actually Ground2_4
-    // Why is this PSet1 when this is week 2??
 
     public static boolean isAllCharacterUnique(String sIn){
         char[] testStr = sIn.toCharArray(); // Create char array

@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by HanWei on 18/9/2016.
  */
-public class Ground5 {
+public class Ground1_5 {
     // Week 1 Homework Question 5 - Integer Sorter
     public static void main(String[] args) {
         int[] first = {2, -3, 1, 5, 0, -10};

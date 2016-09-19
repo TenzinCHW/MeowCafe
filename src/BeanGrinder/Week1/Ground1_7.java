@@ -3,8 +3,8 @@ package BeanGrinder.Week1;
 /**
  * Created by HanWei on 18/9/2016.
  */
-public class MyRectangle2D {
-    // Week 1 Homework Question 7 - The MyRectangle2D class, Ground 7
+public class Ground1_7 {
+    // Week 1 Homework Question 7 - The Ground1_7 class
 
 
     private double x;
@@ -42,14 +42,14 @@ public class MyRectangle2D {
         // Helper function that returns the value of {minX, maxX, minY, maxY} of the rectangle, in that order
     }
 
-    public MyRectangle2D() {
+    public Ground1_7() {
         x = 0;
         y = 0;
         width = 1;
         height = 1;
     }
 
-    public MyRectangle2D(double x, double y, double width, double height) {
+    public Ground1_7(double x, double y, double width, double height) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -70,7 +70,7 @@ public class MyRectangle2D {
         // and that value of y is also in between the minimum and maximum y value of the rectangle
     }
 
-    public boolean contains(MyRectangle2D r) {
+    public boolean contains(Ground1_7 r) {
         return (this.contains(r.getMinMax()[0], r.getMinMax()[2]) &&
                 this.contains(r.getMinMax()[0], r.getMinMax()[3]) &&
                 this.contains(r.getMinMax()[1], r.getMinMax()[2]) &&
@@ -78,7 +78,7 @@ public class MyRectangle2D {
         // This rectangle should fully contain the corners of the the other rectangle
     }
 
-    public boolean overlaps(MyRectangle2D r) {
+    public boolean overlaps(Ground1_7 r) {
         double minX1 = this.getMinMax()[0];
         double maxX1 = this.getMinMax()[1];
         double minY1 = this.getMinMax()[2];
@@ -106,5 +106,9 @@ public class MyRectangle2D {
 //                this.getMinMax()[0] > r.getMinMax()[0] && this.getMinMax()[1] < r.getMinMax()[1])  ||
 //                 (this.getMinMax()[3] < r.getMinMax()[3] && this.getMinMax()[2] > r.getMinMax()[2] &&
 //                 this.getMinMax()[0] < r.getMinMax()[0] && this.getMinMax()[1] > r.getMinMax()[1]));
+    }
+
+    public static void main(String[] args) {
+        // Please insert tests here :x
     }
 }

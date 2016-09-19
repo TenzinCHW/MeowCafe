@@ -1,15 +1,15 @@
 package BeanGrinder.Week2;
 
-import BeanCollector.Week1.Account;
+import BeanCollector.Week1.Harvest1_3;
 
 /**
  * Created by HanWei on 19/9/2016.
  */
-public class CheckingAccount extends Account {
+public class Ground2_3 extends Harvest1_3 {
     // Week 2 Homework Question 3
     // Actually Ground2_3
 
-    public CheckingAccount(int id, double balance){
+    public Ground2_3(int id, double balance){
         super(id, balance);
     }
 
@@ -24,7 +24,7 @@ public class CheckingAccount extends Account {
     }
 
     public static void main(String[] args) {
-        CheckingAccount myCheckAcc = new CheckingAccount(1024, 8000.0);
+        Ground2_3 myCheckAcc = new Ground2_3(1024, 8000.0);
         myCheckAcc.deposit(2000);
         myCheckAcc.withdraw(15000);
         System.out.println(myCheckAcc.getBalance());

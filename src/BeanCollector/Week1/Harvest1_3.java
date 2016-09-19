@@ -1,24 +1,23 @@
 package BeanCollector.Week1;
 
-import java.lang.reflect.Field;
 import java.util.Date;
 
 /**
  * Created by HanWei on 15/9/2016.
  */
-public class Account {
-    // This is actually Harvest1_3 :X
+public class Harvest1_3 {
+    // Week 1 Cohort Question 3
 
     private int id = 0;
     private double balance = 0;
     private double annualInterestRate = 0;
     private Date dateCreated;
 
-    public Account(){
+    public Harvest1_3(){
         dateCreated = new Date();
     }
 
-    public Account(int id, double balance){
+    public Harvest1_3(int id, double balance){
         this.id = id;
         this.balance = balance;
         dateCreated = new Date();
@@ -66,5 +65,15 @@ public class Account {
 
     public void deposit(double amount){
         balance += amount;
+    }
+
+    public static void main (String[] args) {
+        Harvest1_3 account = new Harvest1_3(1122, 20000);
+        account.setAnnualInterestRate(4.5);
+        account.withdraw(2500);
+        account.deposit(3000);
+        System.out.println("Balance is " + account.getBalance());
+        System.out.println("Monthly interest is " +
+                account.getMonthlyInterest());
     }
 }

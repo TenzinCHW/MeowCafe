@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by HanWei on 18/9/2016.
  */
-public class Ground3 {
+public class Ground1_3 {
     // Week 1 Homework Question 3 - Prime Number Checker
     public static void main(String[] args) {
         int[] meow = {4, 7, 14, 23, 99};
