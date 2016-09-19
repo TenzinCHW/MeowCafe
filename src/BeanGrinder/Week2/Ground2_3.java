@@ -7,7 +7,6 @@ import BeanCollector.Week1.Harvest1_3;
  */
 public class Ground2_3 extends Harvest1_3 {
     // Week 2 Homework Question 3
-    // Actually Ground2_3
 
     public Ground2_3(int id, double balance){
         super(id, balance);
