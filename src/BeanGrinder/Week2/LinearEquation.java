@@ -4,8 +4,8 @@ package BeanGrinder.Week2;
  * Created by HanWei on 19/9/2016.
  */
 public class LinearEquation {
-    // Week 2 Cohort 1
-    // Should be Harvest2_1
+    // Week 2 Homework 1
+    // Should be Ground2_1
     private double a;
     private double b;
     private double c;

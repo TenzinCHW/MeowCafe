@@ -4,7 +4,7 @@ package BeanGrinder.Week2;
  * Created by HanWei on 19/9/2016.
  */
 public class TestLinearEquation {
-    // Test for Week 2 Cohort 1
+    // Test for Week 2 Homework 1
     public static void main(String[] args) {
         double a = 1.0;
         double b = 2.0;
