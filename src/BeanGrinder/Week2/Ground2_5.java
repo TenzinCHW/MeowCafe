@@ -21,11 +21,9 @@ public class Ground2_5 implements Comparable<Ground2_5> {
     public int compareTo(Ground2_5 o){
         if (o.getSide() == this.getSide()){
             return 0;
-        }
-        else if (o.getSide() > this.getSide()){
+        } else if (o.getSide() > this.getSide()) {
             return -1;
-        }
-        else{
+        } else{
             return 1;
         }
     }
