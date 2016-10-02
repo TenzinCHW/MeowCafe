@@ -13,7 +13,6 @@ public class PiGenerator {
      */
 
     public static int[] computePiInHex(int precision) {
-        // TODO: Implement (Problem b)
         if (precision<0){
             return null;
         }
@@ -35,7 +34,6 @@ public class PiGenerator {
      * @return a^b mod m
      */
     public static int powerMod(int a, int b, int m) {
-        // TODO: Implement (Problem a)
         if (a < 0 || b < 0 || m <= 0) {
             return -1;
         }
