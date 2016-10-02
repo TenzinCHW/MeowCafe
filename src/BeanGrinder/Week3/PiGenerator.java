@@ -1,5 +1,7 @@
 package BeanGrinder.Week3;
 
+import java.util.Arrays;
+
 public class PiGenerator {
     /**
      * Returns precision hexadecimal digits of the fractional part of pi.
@@ -12,13 +14,17 @@ public class PiGenerator {
      * @return precision digits of pi in hexadecimal.
      */
 
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(computePiInHex(4)));
+    }
+
     public static int[] computePiInHex(int precision) {
         if (precision<0){
             return null;
         }
-        int[] meow = new int[precision+1];
-        for (int i = 0; i <= precision; i++) {
-            meow[i] = piDigit(i);
+        int[] meow = new int[precision];
+        for (int i = 1; i <= precision; i++) {
+            meow[i-1] = piDigit(i);
         }
         return meow;
     }
