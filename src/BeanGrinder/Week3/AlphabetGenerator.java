@@ -1,5 +1,7 @@
 package BeanGrinder.Week3;
 
+import java.util.Arrays;
+
 public class AlphabetGenerator {
     /**
      * Given a numeric base, return a char[] that maps every digit that is
@@ -52,7 +54,45 @@ public class AlphabetGenerator {
      */
     public static char[] generateFrequencyAlphabet(int base,
                                                    String[] trainingData) {
-        // TODO: Implement (Problem f)
-        return null;
+        if (base < 0){
+            return null;
+        }
+
+        int[] count = new int[26];
+        int total = 0;
+        for (int i = 0; i < trainingData.length; i++) {
+            for (int j = 0; j < trainingData[i].length(); j++) {
+                if ((int)trainingData[i].charAt(j) < 97 || (int)trainingData[i].charAt(j) > 122){
+                    continue;
+                }
+                else{
+                    count[trainingData[i].charAt(j) - 'a'] += 1;
+                    total += 1;
+                }
+            }
+        }
+
+        double[] PDF = new double[26];
+        double[] CDF = new double[26];
+
+        for (int i = 0; i < 26; i++) {
+            PDF[i] = (double)count[i];
+            CDF[i] = 0;
+            for (int j = 0; j <= i; j++) {
+                CDF[i] += PDF[j];
+            }
+        }
+
+        char[]  alpha = new char[base];
+
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < 26; j++) {
+                if (CDF[j] * base > i * total){
+                    alpha[i] = (char)(j + 97);
+                    break;
+                }
+            }
+        }
+        return alpha;
     }
 }
