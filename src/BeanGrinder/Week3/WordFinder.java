@@ -1,5 +1,6 @@
 package BeanGrinder.Week3;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,8 +19,19 @@ public class WordFinder {
      * @return The list of needles that were found in the haystack.
      */
     public static Map<String, Integer> getSubstrings(String haystack,
-                                                     String[] needles) { 
-        // TODO: Implement (Problem e)
-        return new HashMap<String, Integer>();
+                                                     String[] needles) {
+
+        HashMap<String, Integer> stringIntegerHashMap = new HashMap<String, Integer>();
+                for (int i = 0; i < needles.length; i++) {
+                    for (int j = 0; j <= haystack.length() - needles[i].length(); j++) {
+                        if (haystack.substring(j, j+needles[i].length()).equals(needles[i])){
+                            stringIntegerHashMap.put(needles[i], j);
+                            break;
+                        }
+            }
+        }
+        return stringIntegerHashMap;
     }
 }
+
+//  There is something wrong with the submission on tutor, got 1 test case wrong.
