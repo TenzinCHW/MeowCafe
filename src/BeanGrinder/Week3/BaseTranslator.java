@@ -33,29 +33,26 @@ public class BaseTranslator {
      */
     public static int[] convertBase(int[] digits, int baseA,
                                     int baseB, int precisionB) {
-        // TODO: Implement (Problem c)
+
         if (baseA < 2 || baseB < 2 || precisionB < 1) {
             return null;
         }
-        for (int i = 0; i < digits.length; i++) {
-            if (digits[i] < 0 || digits[i] >= baseA){
-                return null;
-            }
-        }
-
-        int carry = 0;
+        int carry;
         int x;
-        int[] meow = new int[precisionB];
-        int[] woof = new int[digits.length];
+        int[] output = new int[precisionB];
 
         for (int i = 0; i < precisionB; i++) {
+            carry = 0;
             for (int j = digits.length-1; j >= 0; j--) {
+                if (digits[j] < 0 || digits[j] >= baseA){
+                    return null;
+                }
                 x = digits[j] * baseB + carry;
-                woof[j] = x % baseA;
                 carry = x / baseA;
+                digits[j] = x % baseA;
             }
-            meow[i] = carry;
+            output[i] = carry;
         }
-        return meow;
+        return output;
     }
 }
