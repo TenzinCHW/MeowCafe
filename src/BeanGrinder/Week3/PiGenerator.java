@@ -14,9 +14,9 @@ public class PiGenerator {
      * @return precision digits of pi in hexadecimal.
      */
 
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(computePiInHex(4)));
-    }
+//    public static void main(String[] args) {
+//        System.out.println(Arrays.toString(computePiInHex(4)));
+//    }
 
     public static int[] computePiInHex(int precision) {
         if (precision<0){
