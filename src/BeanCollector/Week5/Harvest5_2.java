@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
  */
 public class Harvest5_2 {
     public static void main(String[] args) {
-        System.out.println(chkSentence("Timothy's Java program is done?"));
+        System.out.println(chkSentence("Timothy's Java program is done?")+"Timothy's Java program is done?");
         System.out.println(chkSentence("I like SUTD."));
         System.out.println(chkSentence("It?s a cloudy day."));
         System.out.println(chkSentence("All's well that ends well-"));
@@ -16,11 +16,11 @@ public class Harvest5_2 {
 //        System.out.println(Pattern.matches("meow$", "meow"));
     }
 
-    public static String chkSentence(String input) {
-        if (Pattern.matches(".*-s\\s.*", input) || Pattern.matches(".*,s\\s.*", input) || Pattern.matches(".*,$", input) || Pattern.matches(".*-$", input)) {
-            return String.format("Found bad sentence %s", input);
+    public static String chkSentence(String input) {  // the ? is also not allowed before an s followed by whitespace or at the end of a line.
+        if (Pattern.matches(".*-s\\s.*", input) || Pattern.matches(".*\\?$", input) || Pattern.matches(".*\\?s\\s.*", input) || Pattern.matches(".*,s\\s.*", input) || Pattern.matches(".*,$", input) || Pattern.matches(".*-$", input)) {
+            return "Found bad sentence: ";
         } else {
-            return String.format("Found good sentence %s", input);
+            return "Found good sentence: ";
         }
     }
 }
