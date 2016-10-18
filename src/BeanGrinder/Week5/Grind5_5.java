@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * Created by HanWei on 17/10/2016.
  */
-public class letterWordFinder {
+public class Grind5_5 {
     public static void main(String[] args) {
         System.out.println(returnWords("left", "this stressful time on the twelfth felt strangely uneventful"));
     }
