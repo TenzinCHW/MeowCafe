@@ -94,7 +94,6 @@ public class PianoMachine {
         }
     }
 
-    //TODO write method spec
     public void playback(){
         long now = 0;
         for (int i = 0; i < currentlyRecording.size(); i++) {
