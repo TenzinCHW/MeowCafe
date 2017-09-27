@@ -1,0 +1,19 @@
+package CoffeeBrewer.Cup4;
+
+/**
+ * Created by HanWei on 8/12/2016.
+ */
+public class TESTOBSERVER {
+    public static void main(String[] args) {
+        AirPollutionAlert singaporeAlert = new AirPollutionAlert();
+        Subscriber man = new Subscriber("man", singaporeAlert);
+        Subscriber simon = new Subscriber("simon", singaporeAlert);
+
+        singaporeAlert.setAirPollutionIndex(200);
+        singaporeAlert.setAirPollutionIndex(50);
+        singaporeAlert.setAirPollutionIndex(120);
+        singaporeAlert.unregister(man);
+        singaporeAlert.setAirPollutionIndex(300);
+    }
+
+}
